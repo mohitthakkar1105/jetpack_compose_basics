@@ -23,7 +23,9 @@ fun BottomSheetExample() {
             onClick = {
                 showBottomSheet = true
             },
-            modifier = Modifier.padding(20.dp)
+            modifier = Modifier
+                .padding(20.dp)
+
         ) {
             Text("Open Bottom Sheet")
         }
@@ -35,13 +37,20 @@ fun BottomSheetExample() {
                 onDismissRequest = {
                     showBottomSheet = false
                 },
+//                modifier = Modifier.fillMaxHeight()
+                ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .fillMaxHeight()
+                        .padding(20.dp)
+                ) {
 
-            ) {
-
-                Text(
-                    text = "Hello Mohit",
-                    modifier = Modifier.padding(20.dp)
-                )
+                    Text(
+                        text = "Hello Mohit",
+                        modifier = Modifier.padding(20.dp)
+                    )
+                }
             }
 
         }
