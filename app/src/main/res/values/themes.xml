@@ -2,4 +2,10 @@
 <resources>
 
     <style name="Theme.LearnJetpackCompose" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <!--  native splash ka ilaj , android menifest me bhi kiya hai dekh lena activity ke ander  -->
+    <style name="Theme.Transparent" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
 </resources>
